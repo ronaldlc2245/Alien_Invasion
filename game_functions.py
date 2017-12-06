@@ -281,7 +281,11 @@ def create_alien(ai_settings, screen, aliens, alien_number, row_number, enemy_bu
     alien.x = alien_width + 2 * alien_width * alien_number
     alien.rect.x = alien.x
     alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
-
+    
+	alien.add_enemy_bullets((ai_settings, screen, enemy_bullets)
+	aliens.add(alien)
+	
+	"""
     # Use random number to determine which alien fires
     random_number = random.randint(0, 99)
     if random_number % 3 == 0:
@@ -292,7 +296,7 @@ def create_alien(ai_settings, screen, aliens, alien_number, row_number, enemy_bu
         aliens.add(alien)
     else:
         aliens.add(alien)
-
+    """
 
 
 def create_fleet(ai_settings, screen, ship, aliens, enemy_bullets):
