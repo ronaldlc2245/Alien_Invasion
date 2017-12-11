@@ -271,16 +271,8 @@ def create_alien(ai_settings, screen, aliens, alien_number, row_number, enemy_bu
     alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
 
     # Use random number to determine which alien fires
-    random_number = random.randint(0, 99)
-    if random_number % 3 == 0:
-        if 10 > ai_settings.enemy_bullet_limit > 0:
-            alien.add_enemy_bullets(ai_settings, screen, enemy_bullets)
-            ai_settings.enemy_bullet_limit -= 1
-
-        aliens.add(alien)
-    else:
-        aliens.add(alien)
-
+    alien.add_enemy_bullets(ai_settings, screen, enemy_bullets)
+    aliens.add(alien)
 
 
 def create_fleet(ai_settings, screen, ship, aliens, enemy_bullets):
