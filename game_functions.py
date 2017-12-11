@@ -5,7 +5,6 @@ import pygame
 from enemy_bullet import Enemy_Bullet
 from bullet import Bullet
 from alien import Alien
-from ability import Ability
 
 
 def check_keydown_events(event, ai_settings, screen, ship, bullets):
@@ -135,12 +134,6 @@ def update_enemy_bullets(ai_settings, screen, stats, sb, ship, aliens, bullets, 
     check_bullet_ship_collisions(ai_settings, screen, stats, sb, ship, aliens, bullets, enemy_bullets)
 
 
-
-    # check enemy bullet with ship collision
-   # check_bullet_ship_collisions(ai_settings, screen, stats, sb, ship,
-    #                              aliens, bullets)
-
-
 def check_high_score(stats, sb):
     """Check to see if there's a new high score."""
     if stats.score > stats.high_score:
@@ -160,11 +153,6 @@ def check_bullet_ship_collisions(ai_settings, screen, stats, sb, ship, aliens,
         pass
     else:
         ai_settings.ship_limit -= 1
-
-        for x in range(1000):
-            pass
-
-    print("Ship Limit: ", ai_settings.ship_limit)
 
 
 def check_bullet_alien_collisions(ai_settings, screen, stats, sb, ship,
@@ -281,11 +269,7 @@ def create_alien(ai_settings, screen, aliens, alien_number, row_number, enemy_bu
     alien.x = alien_width + 2 * alien_width * alien_number
     alien.rect.x = alien.x
     alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
-    
-	alien.add_enemy_bullets((ai_settings, screen, enemy_bullets)
-	aliens.add(alien)
-	
-	"""
+
     # Use random number to determine which alien fires
     random_number = random.randint(0, 99)
     if random_number % 3 == 0:
@@ -296,7 +280,7 @@ def create_alien(ai_settings, screen, aliens, alien_number, row_number, enemy_bu
         aliens.add(alien)
     else:
         aliens.add(alien)
-    """
+
 
 
 def create_fleet(ai_settings, screen, ship, aliens, enemy_bullets):

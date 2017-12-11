@@ -7,7 +7,6 @@ from scoreboard import Scoreboard
 from button import Button
 from ship import Ship
 import game_functions as gf
-from ability import Ability
 
 
 def run_game():
@@ -35,7 +34,7 @@ def run_game():
     
     # Make a ship, a group of bullets, and a group of aliens.
     ship = Ship(ai_settings, screen)
-    #ship2 = Ship(ai_settings, )
+
     bullets = Group()
     enemy_bullets = Group()
     aliens = Group()
@@ -43,7 +42,6 @@ def run_game():
     # Create the fleet of aliens.
     gf.create_fleet(ai_settings, screen, ship, aliens, enemy_bullets)
 
-   
 
     # Start the main loop for the game.
     while True:

@@ -44,15 +44,7 @@ class Settings():
         self.bullet_speed_factor = 3
         self.alien_speed_factor = 2
 
-        """
-        Use random number generator to generate a number between 1 and 5
-        settings will change randomly
-        
-        self.ship_speed_factor = random.randint(0, 6)
-        self.bullet_speed_factor = random.randint(0,6)
-        self.alien_speed_factor = random.randint(0, 6)
-        
-        """
+
         
         # Scoring.
         self.alien_points = 50
